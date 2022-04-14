@@ -1,0 +1,6 @@
+framework module Pods_PuzzleKu {
+  umbrella header "Pods-PuzzleKu-umbrella.h"
+
+  export *
+  module * { export * }
+}

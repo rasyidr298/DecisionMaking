@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GoalOption" representedClassName="GoalOption" syncable="YES" codeGenerationType="class">
+        <attribute name="isShow" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="textOption" optional="YES" attributeType="Binary"/>
+        <attribute name="titleOption" optional="YES" attributeType="String"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goals" inverseName="goalOption" inverseEntity="Goals"/>
+    </entity>
+    <entity name="Goals" representedClassName="Goals" syncable="YES" codeGenerationType="class">
+        <attribute name="countOption" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isPin" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="textGoals" optional="YES" attributeType="String"/>
+        <attribute name="titleGoals" optional="YES" attributeType="String"/>
+        <relationship name="goalOption" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GoalOption" inverseName="goal" inverseEntity="GoalOption"/>
+    </entity>
+    <elements>
+        <element name="Goals" positionX="-150.578125" positionY="-203.296875" width="128" height="133"/>
+        <element name="GoalOption" positionX="151.89453125" positionY="-171.51953125" width="128" height="103"/>
+    </elements>
+</model>
